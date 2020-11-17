@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 //import model
-// const  = require(``);
+const Cloud = require(`.models/cloud.js`);
+const Subscribe = require(`.models/subscribe.js`);
 
 //Create express app
 const app = express();
@@ -15,6 +16,9 @@ app.set('view engine', 'ejs');
 
 //app.use is for using middleware
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Parse all requests for url encoded form data.
+app.use(express.urlencoded({ extended: true }));
 
 //Connect to DB
 mongoose.connect(process.env.MONGODB_URL, {
@@ -33,17 +37,72 @@ db.once('open', function() {
 
 });
 
+//HTML Endpoints
 //index
-app.get('/', function(req, res) {
-  res.send('');
+app.get('/', function(req, res){
+  res.render('pages/index', {
+    title: "Life Cloud", 
+    tagline: ""})
+});
+
+//gallery page
+app.get('/gallery', function(req, res){
+  res.render('pages/gallery', {
+    title: "Gallery", 
+    tagline: ""})
+});
+
+app.get('/gallery/:id',function(req, res){
+  res.send(`<img src="https://picsum.photos/id/${req.params.id}/750" alt="Lorem Picsum Image">`)
+});
+
+//subscribe page
+app.get('/subscribe', function(req, res){
+  res.render('pages/subscribe', {
+    title: "Subscribe", 
+    tagline: "Subscribe to our newsletter"})
+});
+
+//JSON Endpoints
+//Gallery
+app.get('/api/clouds', function(req, res){
+  Cloud.find({}, function(err, data) {
+    if(err) {
+      res.send('<p>Could not retrieve clouds.</p><p>Please import \'cloud\' to database.</p>');
+    }else {
+      res.json(data);
+    }
+  });
 })
 
-//JSON endpoint of array of objects
-app.get('/gallery', function(req, res) {
+app.get('/api/v0/clouds/:id', function(req, res) {
+  let cloudId = req.params.id;
+  Cloud.findOne({id: cloudId}, function(err, data) {
+    if(err || data === null) {
+      res.send('ID you\'ve entered does not exist!');
+      console.log(err);
+    }else {
+      res.json(data);
+    }
+  });
 })
 
-//JSON endpoint of specified ID individually
-app.get('/subscribe', function(req, res) {
+//Subscribers
+
+// Do something with form data
+app.post('/subscribers',function(req,res){
+  console.log(req.body);
+  res.send(`<p>Thanks, ${req.body.firstName} ${req.body.lastName}! We'll send newsletter updates to ${req.body.email}</p>`);
+});
+
+app.get('/api/subscribers', function(req, res){
+  Subscribe.find({}, function(err, data) {
+    if(err) {
+      res.send('<p>Could not retrieve subscribers.</p><p>Please import \'subscribe\' to database.</p>');
+    }else {
+      res.json(data);
+    }
+  });
 })
 
 //Add more middleware
