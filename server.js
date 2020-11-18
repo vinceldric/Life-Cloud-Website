@@ -5,9 +5,11 @@ const ejs = require('ejs');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
+
 //import model
 const Cloud = require(`./models/cloud.js`);
 const Subscribe = require(`./models/subscriber.js`);
+
 
 //Create express app
 const app = express();
@@ -20,22 +22,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Parse all requests for url encoded form data.
 app.use(express.urlencoded({ extended: true }));
 
-//Connect to DB
-// mongoose.connect(process.env.MONGODB_URL, {
-//   useUnifiedTopology: true,
-//   useNewUrlParser: true
-// });
 
-// var db = mongoose.connection;
+// Connect to Database
+mongoose.connect(process.env.MONGODB_URL, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
+});
 
-// db.on('error', function(err){
-//   console.log(`Connection Error: ${err.message}`)
-// });
+var db = mongoose.connection;
 
-// db.once('open', function() {
-//   console.log('Connected to DB...');
+db.on('error', function(err){
+  console.log(`Connection Error: ${err.message}`)
+});
 
-// });
+db.once('open', function() {
+  console.log('Connected to Database...');
+});
+
 
 //HTML Endpoints
 //index
@@ -66,6 +69,7 @@ app.get('/subscribe', function(req, res){
     tagline: "Subscribe to our newsletter"})
 });
 
+
 //JSON Endpoints
 //Gallery
 app.get('/api/clouds', function(req, res){
@@ -91,7 +95,6 @@ app.get('/api/v0/clouds/:id', function(req, res) {
 })
 
 //Subscribers
-
 // Do something with form data
 app.post('/subscribers',function(req,res){
   console.log(req.body);
@@ -107,6 +110,7 @@ app.get('/api/subscribers', function(req, res){
     }
   });
 })
+
 
 //Add more middleware
 app.use(function(req, res, next) {
