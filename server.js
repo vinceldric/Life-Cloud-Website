@@ -6,8 +6,8 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 //import model
-const Cloud = require(`.models/cloud.js`);
-const Subscribe = require(`.models/subscribe.js`);
+const Cloud = require(`./models/cloud.js`);
+const Subscribe = require(`./models/subscriber.js`);
 
 //Create express app
 const app = express();
