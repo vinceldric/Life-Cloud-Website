@@ -1,36 +1,52 @@
-# CPNT262-A Web Client & Server Prog.
-## [Final Project](https://github.com/sait-wbdv/assessments/tree/master/cpnt262/final) : Deployed Product/Services Website
+# Course Title: CPNT262-A - Web Client & Server Prog.
 
-#### Project Name : Life Cloud
+## Assignment: cpnt262 - Final Project
 
-by 
-- [Jaime Hellman](https://github.com/j-hellman)
-  - owner of the repo
-  - working on Frontend Fetch()
-  - working on JSON Endpoints
-  - working on HTML Endpoints
+## Team Name: Life Cloud
 
-- [Jina Hwang](https://github.com/geumjinhwang)
-  - find the template
-  - find the project name
-  - working on the images
-  - working on EJS View Setup(pages/partials)
+## Team Members
+  - Jaime Hellman
+  - Jina Hwang
+  - Vincent Miranda
 
-- [Vincent Miranda](https://github.com/vinceldric)
-  - set up the server.js
-  - worked on README file
-  - worked on project setup
-  - working on the schema/model implementation
-  - working on import.js
-  - working on DB Seeds
-  - working on HTML Endpoints
+## Short Summary
+  - lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
 
-GitHub [Repo](https://github.com/j-hellman/cpnt262-finalProject)
+## Responsibilities
+  - **Jaime Hellman**
+    - owner of the repo
+    - working on Frontend Fetch()
+    - working on JSON Endpoints
+    - working on HTML Endpoints
+  
+  - **Jina Hwang**
+    - find the template
+    - find the project name
+    - working on the images
+    - working on EJS View Setup(pages/partials)
 
-Heroku App [Link]()
+  - **Vincent Miranda**
+    - set up the server.js
+    - worked on README file
+    - worked on project setup
+    - working on the schema/model implementation
+    - working on import.js
+    - working on DB Seeds
+    - working on HTML Endpoints
 
-#### Assets
-- lorem ipsum
+## Links to
+  - [Git Hub repo](https://github.com/j-hellman/cpnt262-finalProject);
+  - [Heroku page](https://cpnt262-final-project.herokuapp.com/).
 
-#### Short Summary
-- lorem ipsum
+## Comments
+  - lorem ipsum;
+  - lorem ipsum;
+  - lorem ipsum.
+
+## Assets
+  - Template website is from [HTML5up](https://html5up.net/);
+  - [Final Project](https://github.com/sait-wbdv/assessments/tree/master/cpnt262/final): Deployed Product/Services Website;
+  - Instructor [Tony Grime's](https://github.com/acidtone) code as reference;
+  - lorem ipsum;
+  - lorem ipsum;
+  - lorem ipsum.
