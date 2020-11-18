@@ -7,7 +7,7 @@ const dbSeed = require(`./seeds/subscribers.js`);
 
 // Define model
 const Cloud = require(`./models/cloud.js`);
-const Subscribe = require(`./models/subscribe.js`);
+const Subscriber = require(`./models/subscriber.js`);
 
 /*******************************/
 /* Mongoose/MongoDB Connection */
@@ -33,7 +33,7 @@ Cloud.insertMany(dbSeed, function(err, cloud) {
   console.log('Data import completed.')
   mongoose.connection.close();
 });
-Subscribe.insertMany(dbSeed, function(err, subscribe) {
+Subscriber.insertMany(dbSeed, function(err, subscriber) {
   console.log('Data import completed.')
   mongoose.connection.close();
 });

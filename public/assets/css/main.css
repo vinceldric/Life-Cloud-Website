@@ -2325,3 +2325,20 @@ input, select, textarea {
 .lifecloud {
 	width: 600px;
 }
+
+/* style and display of the images */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20ch, 40ch));
+  justify-content: center;
+  grid-gap: 3rem;
+
+  max-width: 1500px;
+  margin: auto;
+}
+
+/* margin and alignment of the figcaption */
+.card {
+  margin: 0.5em;
+  text-align: center;
+}

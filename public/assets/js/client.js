@@ -1,4 +1,3 @@
-
 // Asynchronous gallery fetch
 fetch(`${window.location.origin}/api/v0/gallery`)
 
@@ -8,18 +7,20 @@ fetch(`${window.location.origin}/api/v0/gallery`)
 
 .then(function(clouds) {
   // Variable where the img tags will be stored
+  console.log(clouds);
+  
   let output = '';
 
-  clouds.forEach(function(clouds) {
-    output += `<figure>
-                  <img src=${clouds.imagePath} alt="${clouds.title}">
+  clouds.forEach(function(cloud) {
+    output += `<figure class="card">
+                  <img src="/${cloud.imagePath}" alt="${cloud.title} width="250" height="250">
                   
                   <figcaption>
-                    <h2>${clouds.description}</h2>
+                    ${cloud.description}
                   </figcaption>
 
                 </figure>`;
-  });
+  })
 
  // Output to DOM
  document.querySelector('.gallery').innerHTML = output;

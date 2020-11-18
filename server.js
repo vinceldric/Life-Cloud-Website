@@ -2,6 +2,7 @@
 const path = require('path');
 const express = require('express');
 const ejs = require('ejs');
+const clouds = require('./seeds/clouds');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
@@ -24,20 +25,20 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // Connect to Database
-mongoose.connect(process.env.MONGODB_URL, {
-  useUnifiedTopology: true,
-  useNewUrlParser: true
-});
+// mongoose.connect(process.env.MONGODB_URL, {
+//   useUnifiedTopology: true,
+//   useNewUrlParser: true
+// });
 
-var db = mongoose.connection;
+// var db = mongoose.connection;
 
-db.on('error', function(err){
-  console.log(`Connection Error: ${err.message}`)
-});
+// db.on('error', function(err){
+//   console.log(`Connection Error: ${err.message}`)
+// });
 
-db.once('open', function() {
-  console.log('Connected to Database...');
-});
+// db.once('open', function() {
+//   console.log('Connected to Database...');
+// });
 
 
 //HTML Endpoints
@@ -46,7 +47,8 @@ app.get('/', function(req, res){
   res.render('pages/index', {
     title: "Life Cloud",
     current: "pg-index",
-    tagline: ""})
+    tagline: ""
+  })
 });
 
 //gallery page
@@ -54,7 +56,8 @@ app.get('/gallery', function(req, res){
   res.render('pages/gallery', {
     title: "Gallery",
     current: "pg-gallery",
-    tagline: "Take a look on our gallery"})
+    tagline: "Take a look on our gallery"
+  })
 });
 
 app.get('/gallery/:id',function(req, res){
@@ -66,13 +69,18 @@ app.get('/subscribe', function(req, res){
   res.render('pages/subscribe', {
     title: "Subscribe", 
     current: "pg-subscribe",
-    tagline: "Subscribe to our newsletter"})
+    tagline: "Subscribe to our newsletter"
+  })
 });
 
 
 //JSON Endpoints
 //Gallery
-app.get('/api/clouds', function(req, res){
+app.get('/api/v0/gallery', function(req, res){
+  res.json(clouds);
+});
+
+app.get('/api/v0/clouds', function(req, res){
   Cloud.find({}, function(err, data) {
     if(err) {
       res.send('<p>Could not retrieve clouds.</p><p>Please import \'cloud\' to database.</p>');
