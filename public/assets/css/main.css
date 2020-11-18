@@ -566,7 +566,7 @@ input, select, textarea {
 		}
 
 	h2 {
-		font-size: 2.25em;
+		font-size: 	1.5em;
 		line-height: 1.25em;
 		letter-spacing: -0.05em;
 	}
@@ -863,14 +863,14 @@ input, select, textarea {
 		-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		color: #39454b;
+		color: #2c3a41;
 		display: block;
 		width: 100%;
-		padding: 0.65em 0.75em;
+		padding: 0.5em 0.6em;
 		background: none;
-		border: solid 2px #e5e6e7;
+		border: solid 2px #668383;
 		color: inherit;
-		border-radius: 0.5em;
+		border-radius: 1em;
 		outline: none;
 	}
 
@@ -882,7 +882,7 @@ input, select, textarea {
 		input[type="url"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #9ac8e9;
+			border-color: #87a9a9;
 		}
 
 	input[type="text"],
@@ -892,11 +892,11 @@ input, select, textarea {
 	input[type="search"],
 	input[type="url"],
 	select {
-		line-height: 1.35em;
+		line-height: 1.5em;
 	}
 
 	textarea {
-		min-height: 8em;
+		min-height: 7em;
 	}
 
 	::-moz-focus-inner {
@@ -2279,7 +2279,8 @@ input, select, textarea {
 
 	#contact {
 		overflow: hidden;
-		padding-bottom: 20px;
+		margin-top: -70px;
+		padding-bottom: 100px;
 	}
 
 		#contact .box {
@@ -2329,16 +2330,17 @@ input, select, textarea {
 /* style and display of the images */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20ch, 40ch));
+  grid-template-columns: repeat(auto-fill, minmax(30ch, 30ch));
   justify-content: center;
-  grid-gap: 3rem;
+	grid-gap: 1rem;
 
-  max-width: 1500px;
+  max-width: 1600px;
   margin: auto;
 }
 
 /* margin and alignment of the figcaption */
 .card {
-  margin: 0.5em;
+	margin: 0.5em;
+	padding: 2rem 1rem;
   text-align: center;
 }

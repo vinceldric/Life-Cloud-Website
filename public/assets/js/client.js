@@ -16,6 +16,7 @@ fetch(`${window.location.origin}/api/v0/gallery`)
                   <img src="/${cloud.imagePath}" alt="${cloud.title} width="250" height="250">
                   
                   <figcaption>
+                   <h2>${cloud.title}</h2>
                     ${cloud.description}
                   </figcaption>
 
