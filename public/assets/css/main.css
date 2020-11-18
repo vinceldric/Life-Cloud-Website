@@ -2181,8 +2181,8 @@ input, select, textarea {
 		margin: 0;
 		line-height: 1em;
 		padding: 1.5em;
-		background: #38433f;
-		color: rgba(185, 186, 187, 0.5);
+		background: #627a7a;
+		color: rgb(245, 248, 250);
 		overflow: hidden;
 	}
 
@@ -2249,11 +2249,11 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/intro.jpg");
-		background-size: 256px 256px, cover;
+		background: linear-gradient(-180deg, rgb(227, 243, 246), rgba(136, 185, 187, 0.685));
+		background-size: cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
+		background-repeat: no-repeat;
 	}
 
 /* One */
@@ -2319,4 +2319,8 @@ input, select, textarea {
 	/* Current page nav decoration for all pages*/
 .pg-index nav > a, .pg-index nav li:first-child, .pg-gallery nav li:nth-child(2), .pg-subscribe nav li:nth-child(3) {
   text-decoration: underline;
+}
+
+.lifecloud {
+	width: 600px;
 }
