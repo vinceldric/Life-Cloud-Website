@@ -9,7 +9,7 @@ require('dotenv').config();
 
 //import model
 const Cloud = require(`./models/cloud.js`);
-const Subscribe = require(`./models/subscriber.js`);
+const Subscriber = require(`./models/subscriber.js`);
 
 
 //Create express app
@@ -47,7 +47,7 @@ app.get('/', function(req, res){
   res.render('pages/index', {
     title: "Life Cloud",
     current: "pg-index",
-    tagline: ""
+    tagline: "Life on Clouds"
   })
 });
 
@@ -60,8 +60,9 @@ app.get('/gallery', function(req, res){
   })
 });
 
+//NEED to work on this
 app.get('/gallery/:id',function(req, res){
-  res.send(`<img src="https://picsum.photos/id/${req.params.id}/750" alt="Lorem Picsum Image">`)
+  res.send(`<img src="seeds/cloud/${clouds.imagePath}/${req.params.id}/750" alt="Lorem Picsum Image">`)
 });
 
 //subscribe page
@@ -80,7 +81,7 @@ app.get('/api/v0/gallery', function(req, res){
   res.json(clouds);
 });
 
-app.get('/api/v0/clouds', function(req, res){
+app.get('/gallery/api/v0/clouds', function(req, res){
   Cloud.find({}, function(err, data) {
     if(err) {
       res.send('<p>Could not retrieve clouds.</p><p>Please import \'cloud\' to database.</p>');
@@ -90,7 +91,7 @@ app.get('/api/v0/clouds', function(req, res){
   });
 })
 
-app.get('/api/v0/clouds/:id', function(req, res) {
+app.get('/gallery/api/v0/clouds/:id', function(req, res) {
   let cloudId = req.params.id;
   Cloud.findOne({id: cloudId}, function(err, data) {
     if(err || data === null) {
@@ -105,14 +106,15 @@ app.get('/api/v0/clouds/:id', function(req, res) {
 //Subscribers
 // Do something with form data
 app.post('/subscribers',function(req,res){
-  console.log(req.body);
+  Subscriber.insertMany(req.body);
   res.send(`<p>Thank you, ${req.body.name}! We'll send our newsletters to ${req.body.email}.</p>`);
+
 });
 
 app.get('/api/subscribers', function(req, res){
-  Subscribe.find({}, function(err, data) {
+  Subscriber.find({}, function(err, data) {
     if(err) {
-      res.send('<p>Could not retrieve subscribers.</p><p>Please import \'subscribe\' to database.</p>');
+      res.send('<p>Could not retrieve subscribers.</p><p>Please import \'subscriber\' to database.</p>');
     }else {
       res.json(data);
     }

@@ -3,11 +3,11 @@ const dotenv = require('dotenv').config();
 
 // Import seed data
 const dbSeed = require(`./seeds/clouds.js`);
-const dbSeed2 = require(`./seeds/subscribers.js`);
+// const dbSeed2 = require(`./seeds/subscribers.js`);
 
 // Define model
 const Cloud = require(`./models/cloud.js`);
-const Subscriber = require(`./models/subscriber.js`);
+// const Subscriber = require(`./models/subscriber.js`);
 
 /*******************************/
 /* Mongoose/MongoDB Connection */
@@ -31,9 +31,10 @@ db.once('open', function() {
 
 Cloud.insertMany(dbSeed, function(err, cloud) {
   console.log('Data import completed.')
-});
-
-Subscriber.insertMany(dbSeed2, function(err, subscriber) {
-  console.log('Data import completed.')
   mongoose.connection.close();
 });
+
+// Subscriber.insertMany(dbSeed2, function(err, subscriber) {
+//   console.log('Data import completed.')
+//   mongoose.connection.close();
+// });
