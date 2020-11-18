@@ -95,7 +95,7 @@ app.get('/api/v0/clouds/:id', function(req, res) {
 // Do something with form data
 app.post('/subscribers',function(req,res){
   console.log(req.body);
-  res.send(`<p>Thanks, ${req.body.firstName} ${req.body.lastName}! We'll send newsletter updates to ${req.body.email}</p>`);
+  res.send(`<p>Thank you, ${req.body.name}! We'll send our newsletters to ${req.body.email}.</p>`);
 });
 
 app.get('/api/subscribers', function(req, res){

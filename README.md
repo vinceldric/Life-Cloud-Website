@@ -10,9 +10,6 @@
   - [Jina Hwang](https://github.com/geumjinhwang)
   - [Vincent Miranda](https://github.com/vinceldric)
 
-## Short Summary
-  - lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
-
 ## Responsibilities
   - **Jaime Hellman**
     - owner of the repo
@@ -21,10 +18,12 @@
     - working on HTML Endpoints
   
   - **Jina Hwang**
-    - find the template
-    - find the project name
-    - working on the images
-    - working on EJS View Setup(pages/partials)
+    - found the project name
+    - created the life cloud logo
+    - picked the template
+    - found all the gallery images and came up with the services
+    - managed css and seeds/clouds.js file
+    - worked on all the ejs files in views folder
 
   - **Vincent Miranda**
     - set up the server.js
@@ -45,9 +44,10 @@
   - lorem ipsum.
 
 ## Assets
-  - Template website is from [HTML5up](https://html5up.net/);
-  - [Final Project](https://github.com/sait-wbdv/assessments/tree/master/cpnt262/final): Deployed Product/Services Website;
-  - Instructor [Tony Grime's](https://github.com/acidtone) code as reference;
+  - Template website is from [HTML5up](https://html5up.net/)
+  - Images are from [Unsplash](https://unsplash.com)
+  - [Final Project](https://github.com/sait-wbdv/assessments/tree/master/cpnt262/final): Deployed Product/Services Website
+  - Instructor [Tony Grime's](https://github.com/acidtone) code as reference
   - lorem ipsum;
   - lorem ipsum;
   - lorem ipsum.
