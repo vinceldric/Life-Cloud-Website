@@ -1,13 +1,23 @@
 # Course Title: CPNT262-A - Web Client & Server Prog.
 
+<<<<<<< HEAD
 ## Assignment: cpnt262 - [Final Project](https://github.com/sait-wbdv/assessments/tree/master/cpnt262/final)
+=======
+## Assignment: cpnt262 - Final Project
+>>>>>>> ddfd1214db3437ab1409d39bc3c31e23d1789516
 
 ## Team Name: Life Cloud
 
 ## Team Members
+<<<<<<< HEAD
   - [Jaime Hellman](https://github.com/j-hellman)
   - [Jina Hwang](https://github.com/geumjinhwang)
   - [Vincent Miranda](https://github.com/vinceldric)
+=======
+  - Jaime Hellman
+  - Jina Hwang
+  - Vincent Miranda
+>>>>>>> ddfd1214db3437ab1409d39bc3c31e23d1789516
 
 ## Short Summary
   - lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
