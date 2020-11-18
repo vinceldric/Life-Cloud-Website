@@ -51,7 +51,7 @@ app.get('/gallery', function(req, res){
   res.render('pages/gallery', {
     title: "Gallery",
     current: "pg-gallery",
-    tagline: ""})
+    tagline: "Take a look on our gallery"})
 });
 
 app.get('/gallery/:id',function(req, res){
