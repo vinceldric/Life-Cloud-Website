@@ -25,20 +25,20 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // Connect to Database
-// mongoose.connect(process.env.MONGODB_URL, {
-//   useUnifiedTopology: true,
-//   useNewUrlParser: true
-// });
+mongoose.connect(process.env.MONGODB_URL, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
+});
 
-// var db = mongoose.connection;
+var db = mongoose.connection;
 
-// db.on('error', function(err){
-//   console.log(`Connection Error: ${err.message}`)
-// });
+db.on('error', function(err){
+  console.log(`Connection Error: ${err.message}`)
+});
 
-// db.once('open', function() {
-//   console.log('Connected to Database...');
-// });
+db.once('open', function() {
+  console.log('Connected to Database...');
+});
 
 
 //HTML Endpoints
