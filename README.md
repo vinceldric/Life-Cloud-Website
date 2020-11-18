@@ -5,7 +5,7 @@
 ## Team Name: Life Cloud
 
 ## Team Members
-<<<<<<< HEAD
+
   - [Jaime Hellman](https://github.com/j-hellman)
   - [Jina Hwang](https://github.com/geumjinhwang)
   - [Vincent Miranda](https://github.com/vinceldric)
