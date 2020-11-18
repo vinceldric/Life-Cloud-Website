@@ -72,6 +72,11 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Current page nav decoration for all pages*/
+.pg-index nav > a, .pg-index nav li:first-child, .pg-gallery nav li:nth-child(2), .pg-subscribe nav li:nth-child(3) {
+	text-decoration: underline;
+}
+
 /* Basic */
 
 	@-ms-viewport {

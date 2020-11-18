@@ -4,19 +4,19 @@
 #### Project Name : Life Cloud
 
 by 
-- Jaime Hellman
+- [Jaime Hellman](https://github.com/j-hellman)
   - owner of the repo
   - working on Frontend Fetch()
   - working on JSON Endpoints
   - working on HTML Endpoints
 
-- Jina Hwang
+- [Jina Hwang](https://github.com/geumjinhwang)
   - find the template
   - find the project name
   - working on the images
   - working on EJS View Setup(pages/partials)
 
-- Vincent Miranda
+- [Vincent Miranda](https://github.com/vinceldric)
   - set up the server.js
   - worked on README file
   - worked on project setup

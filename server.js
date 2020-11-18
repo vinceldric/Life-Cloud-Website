@@ -6,8 +6,8 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 //import model
-const Cloud = require(`.models/cloud.js`);
-const Subscribe = require(`.models/subscribe.js`);
+// const Cloud = require(`.models/cloud.js`);
+// const Subscribe = require(`.models/subscribe.js`);
 
 //Create express app
 const app = express();
@@ -21,34 +21,36 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
 //Connect to DB
-mongoose.connect(process.env.MONGODB_URL, {
-  useUnifiedTopology: true,
-  useNewUrlParser: true
-});
+// mongoose.connect(process.env.MONGODB_URL, {
+//   useUnifiedTopology: true,
+//   useNewUrlParser: true
+// });
 
-var db = mongoose.connection;
+// var db = mongoose.connection;
 
-db.on('error', function(err){
-  console.log(`Connection Error: ${err.message}`)
-});
+// db.on('error', function(err){
+//   console.log(`Connection Error: ${err.message}`)
+// });
 
-db.once('open', function() {
-  console.log('Connected to DB...');
+// db.once('open', function() {
+//   console.log('Connected to DB...');
 
-});
+// });
 
 //HTML Endpoints
 //index
 app.get('/', function(req, res){
   res.render('pages/index', {
-    title: "Life Cloud", 
+    title: "Life Cloud",
+    current: "pg-index",
     tagline: ""})
 });
 
 //gallery page
 app.get('/gallery', function(req, res){
   res.render('pages/gallery', {
-    title: "Gallery", 
+    title: "Gallery",
+    current: "pg-gallery",
     tagline: ""})
 });
 
@@ -60,6 +62,7 @@ app.get('/gallery/:id',function(req, res){
 app.get('/subscribe', function(req, res){
   res.render('pages/subscribe', {
     title: "Subscribe", 
+    current: "pg-subscribe",
     tagline: "Subscribe to our newsletter"})
 });
 
