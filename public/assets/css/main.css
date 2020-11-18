@@ -2053,6 +2053,7 @@ input, select, textarea {
 
 			.main.style3.secondary {
 				background: #f5f6f7;
+				padding-bottom: 20px;
 			}
 
 		.main.dark {
@@ -2278,7 +2279,7 @@ input, select, textarea {
 
 	#contact {
 		overflow: hidden;
-		padding-bottom: 0;
+		padding-bottom: 20px;
 	}
 
 		#contact .box {
