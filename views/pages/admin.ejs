@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script type="module" src="assets/js/client2.js"></script>
 	</head>
 
   <body class=<%= current %>>
@@ -18,14 +19,21 @@
 		<!-- Header and Nav -->
     <%- include('../partials/header'); %>	
     
-    <!-- Subscribers/Admin -->
-    <div class="inner">
-      <div class="Subscribers">
+		<!-- Subscribers/Admin -->
 
-        
+		<section class="main style3 secondary">
+      <div class="content">
+        <header>
+          <h2><%= title %></h2>
+					<p><%= tagline %></p>
+        </header>
+        <div class="inner">
+					<div class="subscribers">
+					</div>
+				</div>
       </div>
-    </div>
-
+    </section>
+    
 
 		<!-- Footer -->
 		<%- include('../partials/footer'); %>

@@ -97,11 +97,14 @@ app.get('/subscribe', function(req, res){
 });
 
 app.get('/admin', function(req, res) {
-  // res.render('pages/admin', {
-  //   title: "Admin-Side",
-  //   current: "pg-admin",
-  //   tagline: "All About Admin",
-  // })
+  res.render('pages/admin', {
+    title: "Admin",
+    current: "pg-admin",
+    tagline: "List of Subscribers",
+  })
+})
+
+app.get('/api/v0/admin', function(req, res){
   Subscriber.find({}, function(err, data) {
     if(err) {
       res.send('<p>Could not retrieve places.</p><p>Please import \'places\' to database.</p>');
