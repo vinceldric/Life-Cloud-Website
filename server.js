@@ -10,6 +10,7 @@ require('dotenv').config();
 //import model
 const Cloud = require(`./models/cloud.js`);
 const Subscriber = require(`./models/subscriber.js`);
+// const cloudsGallery = require('./seeds/clouds.js');
 
 
 //Create express app
@@ -61,9 +62,16 @@ app.get('/gallery', function(req, res){
 });
 
 //NEED to work on this
-app.get('/gallery/:id',function(req, res){
-  res.send(`<img src="seeds/cloud/${clouds.imagePath}/${req.params.id}/750" alt="Lorem Picsum Image">`)
+// endpoint for individual object
+app.get('/gallery/:id', function(req, res) {
+  const galleryIndiv = clouds.find( c => c.id === parseInt(req.params.id));
+    if (!galleryIndiv) res.status(404).send('Sorry, the image with the given ID was not found.');
+    res.send(`<img src="images/gallery/${clouds.imagePath}.jpg`);
 });
+
+// app.get('/gallery/:id',function(req, res){
+//   res.send(`<img src="seeds/cloud/${clouds.imagePath}/${req.params.id}/750" alt="Lorem Picsum Image">`)
+// });
 
 //subscribe page
 app.get('/subscribe', function(req, res){
