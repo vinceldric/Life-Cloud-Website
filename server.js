@@ -10,7 +10,6 @@ require('dotenv').config();
 //import model
 const Cloud = require(`./models/cloud.js`);
 const Subscriber = require(`./models/subscriber.js`);
-// const cloudsGallery = require('./seeds/clouds.js');
 
 
 //Create express app
@@ -68,13 +67,25 @@ app.get('/gallery/:id', function(req, res) {
     if (!galleryIndiv){
       res.status(404).send('Sorry, the image with the given ID was not found.');
     }else{
-      res.send(`<img src="images/gallery/${clouds.imagePath}.jpg`);
+      res.send(`<img src="/${clouds.imagePath}/${galleryIndiv}/750" alt="Lorem Picsum Image">`);
     }
 });
 
 // app.get('/gallery/:id',function(req, res){
-//   res.send(`<img src="seeds/cloud/${clouds.imagePath}/${req.params.id}/750" alt="Lorem Picsum Image">`)
+//   let cloudId = clouds.id;
+//   if(clouds.id === req.params.id){
+//     res.send(`<img src="/${clouds.imagePath}/${req.params.id}/750" alt="Lorem Picsum Image">`);
+//   }else {
+//     res.status(404).send('Sorry, the image with the given ID was not found.');
+//   }
 // });
+
+// app.get('/gallery/:id', function(req, res){
+//   Cloud.find(function(err, clouds) {
+//     console.log(clouds);
+//     response.render('./pages/gallery', {clouds: clouds})
+//   });
+// })
 
 //subscribe page
 app.get('/subscribe', function(req, res){
@@ -92,6 +103,21 @@ app.get('/admin', function(req, res){
     tagline: "All About Admin"
   })
 });
+
+// app.get('/api/v0/admin', function(req, res){
+//   res.send(subscriber.find());
+// })
+
+// app.get('/admin', function(req, res) {
+//   Subscriber.find({}, function(err, data) {
+//     if(err) {
+//       res.send('<p>Could not retrieve places.</p><p>Please import \'places\' to database.</p>');
+//     }
+//     else {
+//       res.json(data);
+//     }
+//   });
+// })
 
 
 //JSON Endpoints
