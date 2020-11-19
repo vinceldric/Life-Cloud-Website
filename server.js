@@ -65,8 +65,12 @@ app.get('/gallery', function(req, res){
 // endpoint for individual object
 app.get('/gallery/:id', function(req, res) {
   const galleryIndiv = clouds.find( c => c.id === parseInt(req.params.id));
-    if (!galleryIndiv) res.status(404).send('Sorry, the image with the given ID was not found.');
-    res.send(`<img src="images/gallery/${clouds.imagePath}.jpg`);
+    if (!galleryIndiv){
+      res.status(404).send('Sorry, the image with the given ID was not found.');
+    }else{
+      res.send(`<img src="images/gallery/${clouds.imagePath}.jpg`);
+    }
+      
 });
 
 // app.get('/gallery/:id',function(req, res){
@@ -79,6 +83,14 @@ app.get('/subscribe', function(req, res){
     title: "Subscribe", 
     current: "pg-subscribe",
     tagline: "Subscribe to our newsletter"
+  })
+});
+
+app.get('/admin', function(req, res){
+  res.render('pages/admin', {
+    title: "Admin-Side",
+    current: "pg-admin",
+    tagline: "All About Admin"
   })
 });
 
