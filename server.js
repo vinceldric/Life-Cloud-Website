@@ -70,7 +70,6 @@ app.get('/gallery/:id', function(req, res) {
     }else{
       res.send(`<img src="images/gallery/${clouds.imagePath}.jpg`);
     }
-      
 });
 
 // app.get('/gallery/:id',function(req, res){
