@@ -66,7 +66,7 @@ app.get('/gallery', function(req, res){
 app.get('/gallery/:id', function(req, res) {
   const galleryIndiv = clouds.find( c => c.id === parseInt(req.params.id));
     if (!galleryIndiv) res.status(404).send('Sorry, the image with the given ID was not found.');
-    res.send(`<img src="images/gallery/${clouds.imagePath}.jpg`);
+    res.send(`<img src="images/gallery/${clouds.imagePath}/${req.params.id}.jpg`);
 });
 
 // app.get('/gallery/:id',function(req, res){
