@@ -96,28 +96,21 @@ app.get('/subscribe', function(req, res){
   })
 });
 
-app.get('/admin', function(req, res){
-  res.render('pages/admin', {
-    title: "Admin-Side",
-    current: "pg-admin",
-    tagline: "All About Admin"
-  })
-});
-
-// app.get('/api/v0/admin', function(req, res){
-//   res.send(subscriber.find());
-// })
-
-// app.get('/admin', function(req, res) {
-//   Subscriber.find({}, function(err, data) {
-//     if(err) {
-//       res.send('<p>Could not retrieve places.</p><p>Please import \'places\' to database.</p>');
-//     }
-//     else {
-//       res.json(data);
-//     }
-//   });
-// })
+app.get('/admin', function(req, res) {
+  // res.render('pages/admin', {
+  //   title: "Admin-Side",
+  //   current: "pg-admin",
+  //   tagline: "All About Admin",
+  // })
+  Subscriber.find({}, function(err, data) {
+    if(err) {
+      res.send('<p>Could not retrieve places.</p><p>Please import \'places\' to database.</p>');
+    }
+    else {
+      res.json(data);
+    }
+  });
+})
 
 
 //JSON Endpoints
