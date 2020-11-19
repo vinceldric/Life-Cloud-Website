@@ -12,42 +12,44 @@
 
 ## Responsibilities
   - **Jaime Hellman**
-    - owner of the repo
-    - working on Frontend Fetch()
-    - working on JSON Endpoints
-    - working on HTML Endpoints
+    - Owner of the repo
+    - Worked on README file
+    - Deployed to Heroku and MongoDB Atlas
+    - Working on Frontend Fetch()
+    - Working on JSON Endpoints
+    - Working on HTML Endpoints
   
   - **Jina Hwang**
-    - found the project name
-    - created the life cloud logo
-    - picked the template
-    - found all the gallery images and came up with the services
-    - managed css and seeds/clouds.js file
-    - worked on all the ejs files in views folder
+    - Found the project name
+    - Worked on README file
+    - Created the life cloud logo
+    - Picked the template
+    - Found all the gallery images and came up with the services
+    - Managed css and seeds/clouds.js file
+    - Worked on all the ejs files in views folder
 
   - **Vincent Miranda**
-    - set up the server.js
-    - worked on README file
-    - worked on project setup
-    - working on the schema/model implementation
-    - working on import.js
-    - working on DB Seeds
-    - working on HTML Endpoints
+    - Set up the server.js
+    - Worked on README file
+    - Worked on project setup
+    - Working on the schema/model implementation
+    - Working on Frontend Fetch()
+    - Working on import.js
+    - Working on DB Seeds
+    - Working on HTML Endpoints
 
 ## Links to
   - [Git Hub repo](https://github.com/j-hellman/cpnt262-finalProject);
   - [Heroku page](https://cpnt262-final-project.herokuapp.com/).
 
 ## Comments
-  - lorem ipsum;
+  - We had difficult to load images by ID;
+  - We also had difficult to list the subscribers who have submitted the /subscribe form;
   - lorem ipsum;
   - lorem ipsum.
 
 ## Assets
-  - Template website is from [HTML5up](https://html5up.net/)
-  - Images are from [Unsplash](https://unsplash.com)
-  - [Final Project](https://github.com/sait-wbdv/assessments/tree/master/cpnt262/final): Deployed Product/Services Website
-  - Instructor [Tony Grime's](https://github.com/acidtone) code as reference
-  - lorem ipsum;
-  - lorem ipsum;
-  - lorem ipsum.
+  - Template website is from [HTML5up](https://html5up.net/);
+  - Images are from [Unsplash](https://unsplash.com);
+  - [Final Project](https://github.com/sait-wbdv/assessments/tree/master/cpnt262/final): Deployed Product/Services Website;
+  - Instructor [Tony Grime's](https://github.com/acidtone) code as reference.
