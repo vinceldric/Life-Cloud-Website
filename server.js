@@ -67,7 +67,7 @@ app.get('/gallery/:id', function(req, res) {
     if (!galleryIndiv){
       res.status(404).send('Sorry, the image with the given ID was not found.');
     }else{
-      res.send(`<img src="/${clouds.imagePath}/${galleryIndiv}/750" alt="Lorem Picsum Image">`);
+      res.send(`<img src="/${galleryIndiv.imagePath}" alt="Lorem Picsum Image">`);
     }
 });
 
