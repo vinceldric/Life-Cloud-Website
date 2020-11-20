@@ -1,8 +1,9 @@
 // Asynchronous gallery fetch
 fetch(`${window.location.origin}/api/v0/admin`)
 
+// Server send JSON as response
 .then(function(response) {
-  return response.json(); // Server send JSON as response
+  return response.json(); 
 })
 
 .then(function(subscribers) {

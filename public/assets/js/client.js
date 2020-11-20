@@ -1,8 +1,9 @@
 // Asynchronous gallery fetch
 fetch(`${window.location.origin}/api/v0/gallery`)
 
+// Server send JSON as response
 .then(function(response) {
-  return response.json(); // Server send JSON as response
+  return response.json(); 
 })
 
 .then(function(clouds) {
@@ -21,7 +22,7 @@ fetch(`${window.location.origin}/api/v0/gallery`)
                   </figcaption>
 
                 </figure>`;
-  })
+  });
 
  // Output to DOM
  document.querySelector('.gallery').innerHTML = output;
@@ -32,4 +33,4 @@ fetch(`${window.location.origin}/api/v0/gallery`)
   if (error) {
     console.log('Something went wrong!');
   }
-});
+})

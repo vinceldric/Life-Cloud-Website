@@ -3,4 +3,4 @@
 .env.test
 
 # npm dependency directory
-/node_modules
+node_modules
