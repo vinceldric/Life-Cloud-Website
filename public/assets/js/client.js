@@ -13,10 +13,10 @@ fetch(`${window.location.origin}/api/v0/gallery`)
   let output = '';
 
   clouds.forEach(function(cloud) {
-    output += `<figure class="card">
-                  <img src="/${cloud.imagePath}" alt="${cloud.title} width="${cloud.width}" height="${cloud.height}">
+    output += `<figure>
+                  <img src="/${cloud.imagePath}" alt="${cloud.title}" width="${cloud.width}" height="${cloud.height}">
                   
-                  <figcaption class="figcaption">
+                  <figcaption>
                    <h2>${cloud.title}</h2>
                     ${cloud.description}
                   </figcaption>
