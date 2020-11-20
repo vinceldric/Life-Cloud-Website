@@ -31,6 +31,7 @@
     - Completed the seeds/clouds.js
     - Completed the EJS pages in views folder
     - Added some comments on files
+    - Added media queries 
 
   - **Vincent Miranda**
     - Completed the folders structure
@@ -52,6 +53,8 @@
 ## Comments
   - We had difficulty on loading images by their ID, but putting correct image source fixed the problem. 
   - We also had difficultly on the list of subscribers on /Admin page. Vincent figured out the problem by creating 'client2.js' so that it can fetch and display the list of subscribers.
+  - Adding min-height and position property in css for the footer made the footer stick to the bottom. 
+  - We added media queries for navigation bar, logo and made gallery responsive.
 
 ## Assets
   - Template Big Picture is from [HTML5up](https://html5up.net/).
