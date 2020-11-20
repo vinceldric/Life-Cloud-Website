@@ -2340,7 +2340,15 @@ input, select, textarea {
 
 /* margin and alignment of the figcaption */
 .card {
-	margin: 0.5em;
-	padding: 2rem 1rem;
-  text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	width: 16em;
+	padding: 1.5rem 0;
+}
+
+.figcaption {
+	margin-top: 0.5em;
+	width: 15em;
+	text-align: center;
 }
