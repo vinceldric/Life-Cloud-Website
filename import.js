@@ -1,18 +1,17 @@
+// Load Dependencies
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 
-// Import seed data
+
+// Import Seed Data
 const dbSeed = require(`./seeds/clouds.js`);
-// const dbSeed2 = require(`./seeds/subscribers.js`);
 
-// Define model
+
+// Define Model
 const Cloud = require(`./models/cloud.js`);
-// const Subscriber = require(`./models/subscriber.js`);
 
-/*******************************/
-/* Mongoose/MongoDB Connection */
-/*******************************/
 
+// Mongoose/MongoDB Connection
 mongoose.connect(process.env.MONGODB_URL, {
   useUnifiedTopology: true,
   useNewUrlParser: true
@@ -20,21 +19,15 @@ mongoose.connect(process.env.MONGODB_URL, {
 
 var db = mongoose.connection;
 
-db.on('error', function(err){
-  console.log(`Connection Error: ${err.message}`)
+db.on('error', function(err) {
+  console.log(`Connection Error: ${err.message}`);
 });
 
 db.once('open', function() {
   console.log('Connected to DB...');
-
 });
 
 Cloud.insertMany(dbSeed, function(err, cloud) {
-  console.log('Data import completed.')
+  console.log('Data import completed.');
   mongoose.connection.close();
 });
-
-// Subscriber.insertMany(dbSeed2, function(err, subscriber) {
-//   console.log('Data import completed.')
-//   mongoose.connection.close();
-// });
