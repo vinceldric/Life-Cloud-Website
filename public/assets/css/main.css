@@ -1949,6 +1949,7 @@ input, select, textarea {
 		position: relative;
 		margin: 0;
 		overflow-x: hidden;
+		min-height: 100vh;
 	}
 
 		.main > .content {
