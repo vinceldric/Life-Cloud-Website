@@ -1902,15 +1902,28 @@ input, select, textarea {
 
 /* style and display of the images */
 
-.gallery {
-  display: inline-grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-	grid-gap: 1rem;
-  justify-items: center;
+@media (max-width: 1600px) {
+	.gallery {
+  	display: grid;
+  	grid-template-columns: repeat(3, 1fr);
+  	grid-template-rows: repeat(3, 1fr);
+		grid-gap: 1rem;
+  	justify-content: center;
+	}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2rem;
+
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
   .gallery {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
