@@ -1921,10 +1921,7 @@ input, select, textarea {
 						font-size: 1em;
 					}
 
-				#header nav {
-					display: none;
-				}
-
+		
 		}
 
 	body {
@@ -2345,3 +2342,23 @@ input, select, textarea {
   width: 100%;
   text-align: center;
 }
+
+/* media queries for mobile */
+@media (max-width: 800px) {
+  .lifecloud {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+  }
+
+  nav {
+    position: absolute;
+    left: 20%;
+		top: 0;
+		margin-top: 2rem;
+	}
+
+	.title {
+		margin-top: 7rem;
+	}
