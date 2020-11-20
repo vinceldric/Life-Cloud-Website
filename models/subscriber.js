@@ -1,3 +1,4 @@
+// data structure of subscribers on MongoDB collection
 const mongoose = require('mongoose');
 
 const subsSchema = new mongoose.Schema(

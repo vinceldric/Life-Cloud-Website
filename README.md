@@ -13,6 +13,7 @@
 ## Responsibilities
   - **Jaime Hellman**
     - Owner of the repo
+    - created Heroku app
     - Worked on README file
     - Deployed to Heroku and MongoDB Atlas
     - Working on Frontend Fetch()
@@ -24,11 +25,14 @@
     - Worked on README file
     - Created the life cloud logo
     - Picked the template
-    - Found all the gallery images and came up with the services
-    - Managed css and seeds/clouds.js file
-    - Worked on all the ejs files in views folder
+    - Found the gallery images and came up with the services
+    - Managed css of every pages 
+    - Worked on seeds/clouds.js file
+    - Worked on the ejs files in views folder
+    - Added comments on files
 
   - **Vincent Miranda**
+    - Set up the folders structure
     - Set up the server.js
     - Worked on README file
     - Worked on project setup
@@ -43,13 +47,11 @@
   - [Heroku page](https://cpnt262-final-project.herokuapp.com/).
 
 ## Comments
-  - We had difficult to load images by ID;
-  - We also had difficult to list the subscribers who have submitted the /subscribe form;
-  - lorem ipsum;
-  - lorem ipsum.
+  - We had difficulty on loading images by their ID, but puttin correct image source fixed the problem. 
+  - We also had difficultly on the list of subscribers/Admin. Vincent figured out the problem by creating 'client2.js' so that it can fetch and display the list of subscribers.
 
 ## Assets
-  - Template website is from [HTML5up](https://html5up.net/);
-  - Images are from [Unsplash](https://unsplash.com);
+  - Template Big Picture is from [HTML5up](https://html5up.net/);
+  - Gallery images are from [Unsplash](https://unsplash.com);
   - [Final Project](https://github.com/sait-wbdv/assessments/tree/master/cpnt262/final): Deployed Product/Services Website;
   - Instructor [Tony Grime's](https://github.com/acidtone) code as reference.

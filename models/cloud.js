@@ -1,3 +1,4 @@
+// data structure for images on MongoDB collection
 const mongoose = require('mongoose');
 
 const cloudSchema = new mongoose.Schema(

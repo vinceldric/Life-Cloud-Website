@@ -15,6 +15,7 @@ const Subscriber = require(`./models/subscriber.js`);
 // Create Express App
 const app = express();
 
+// view engine
 app.set('view engine', 'ejs');
 
 // app.use is for using middleware
@@ -42,7 +43,7 @@ db.once('open', function() {
 
 
 // HTML Endpoints
-// Index page
+// Index/home page
 app.get('/', function(req, res) {
   res.render('pages/index', {
     title: "Life Cloud",
@@ -54,9 +55,9 @@ app.get('/', function(req, res) {
 // Gallery page
 app.get('/gallery', function(req, res) {
   res.render('pages/gallery', {
-    title: "Gallery",
+    title: "Services",
     current: "pg-gallery",
-    tagline: "Take a look on our gallery"
+    tagline: "Here are our services"
   });
 });
 
@@ -75,15 +76,16 @@ app.get('/subscribe', function(req, res) {
   res.render('pages/subscribe', {
     title: "Subscribe", 
     current: "pg-subscribe",
-    tagline: "Subscribe to our newsletter"
+    tagline: "Receive our newsletters and updates!"
   });
 });
 
+// Admin page
 app.get('/admin', function(req, res) {
   res.render('pages/admin', {
     title: "Admin",
     current: "pg-admin",
-    tagline: "List of Subscribers",
+    tagline: "List of our Subscribers",
   });
 });
 
@@ -144,7 +146,7 @@ app.get('/api/subscribers', function(req, res) {
 
 
 // More Middleware
-// Add more middleware
+// Add more middleware for error/fails
 app.use(function(req, res, next) {
   res.status(404);
   res.send('404: File Not Found');
