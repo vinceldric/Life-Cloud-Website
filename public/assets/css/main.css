@@ -16,7 +16,7 @@ u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
+ header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -26,7 +26,7 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+ header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
@@ -569,6 +569,20 @@ input, select, textarea {
 		font-size: 	1.5em;
 		line-height: 1.25em;
 		letter-spacing: -0.05em;
+	}
+
+	h3 {
+		font-size: 	40px;
+		line-height: 1.25em;
+		letter-spacing: -0.05em;
+		text-shadow: 2px 3px rgb(255, 255, 255);
+		margin-top: 5rem;
+		color: #748f92;
+	}
+
+	p {
+		color: #414f57;
+		
 	}
 
 	@media screen and (max-width: 736px) {
@@ -2293,7 +2307,8 @@ input, select, textarea {
 
 /* size of the logo on the main page*/
 .lifecloud {
-	width: 750px;
+	width: 650px;
+	margin-top: -60px;
 }
 
 /* style and display of the images */

@@ -46,9 +46,9 @@ db.once('open', function() {
 // Index/home page
 app.get('/', function(req, res) {
   res.render('pages/index', {
-    title: "Life Cloud",
+    title: "Welcome!",
     current: "pg-index",
-    tagline: "Life on Clouds"
+    tagline: "Create and organize your library in one page"
   });
 });
 
