@@ -2311,20 +2311,20 @@ input, select, textarea {
 
 /* style and display of the images */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30ch, 30ch));
-  justify-content: center;
-	grid-gap: 1rem;
-
-  max-width: 1600px;
-  margin: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(20ch, 40ch));
+	justify-content: center;
+	grid-gap: 0.5rem;
+	
+	min-width: 1400px;
+	margin: auto;	
 }
 
 /* margin and alignment of the figcaption */
 .card {
 	display: flex;
 	flex-direction: column;
-	align-items: left;
+	align-items: center;
 	width: 16em;
 	padding: 1.5rem 0;
 }
@@ -2335,6 +2335,7 @@ input, select, textarea {
 	text-align: center;
 }
 
+/*footer */
 .fixed {
   position: fixed;
   left: 0;
@@ -2349,10 +2350,15 @@ input, select, textarea {
     display: flex;
     flex-wrap: wrap;
     height: auto;
-    width: 100%;
-  }
+		width: 100%;
+	}
+	
+	#logo{
+		display: flex;
+		justify-content: flex-start;
+	}
 
-  nav {
+  /* nav {
     position: absolute;
     left: 20%;
 		top: 0;
@@ -2361,4 +2367,5 @@ input, select, textarea {
 
 	.title {
 		margin-top: 7rem;
-	}
+	} */
+}

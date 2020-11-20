@@ -14,7 +14,7 @@ fetch(`${window.location.origin}/api/v0/gallery`)
 
   clouds.forEach(function(cloud) {
     output += `<figure class="card">
-                  <img src="/${cloud.imagePath}" alt="${cloud.title} width="250" height="250">
+                  <img src="/${cloud.imagePath}" alt="${cloud.title} width="${cloud.width}" height="${cloud.height}">
                   
                   <figcaption class="figcaption">
                    <h2>${cloud.title}</h2>
