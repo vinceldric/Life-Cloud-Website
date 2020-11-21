@@ -51,24 +51,24 @@
   - Heroku App [Link](https://cpnt262-final-project.herokuapp.com/)
 
 ## HTML Endpoints
-  - /gallery
+  - [/gallery](https://cpnt262-final-project.herokuapp.com/gallery)
     - returns gallery page
-  - /gallery/:id 
+  - [/gallery/:id](https://cpnt262-final-project.herokuapp.com/gallery/1) 
     - :id should be from 1 to 9
     - returns individual image
-  - /subscribe
+  - [/subscribe](https://cpnt262-final-project.herokuapp.com/subscribe)
     - returns subscribe page (subscription form)
-  - /admin
+  - [/admin](https://cpnt262-final-project.herokuapp.com/admin)
     - returns the list of subscribers
     - at first this should be empty, but when someone subscribes then the admin page will list the subscriber/s
 
 ## JSON Endpoints
-  - /gallery/api/v0/clouds
+  - [/gallery/api/v0/clouds](https://cpnt262-final-project.herokuapp.com/gallery/api/v0/clouds)
     - returns the array of objects of the gallery
-  - /gallery/api/v0/clouds/:id
+  - [/gallery/api/v0/clouds/:id](https://cpnt262-final-project.herokuapp.com/gallery/api/v0/clouds/1)
     - :id should be from 1 to 9
     - returns the individual object of the specified ID
-  - /api/subscribers
+  - [/api/subscribers](https://cpnt262-final-project.herokuapp.com/api/subscribers)
     - returns the array of objects of the subscribers
 
 ## Comments
@@ -80,5 +80,4 @@
 ## Assets
   - Template Big Picture is from [HTML5up](https://html5up.net/).
   - Gallery images are from [Unsplash](https://unsplash.com).
-  - [Final Project](https://github.com/sait-wbdv/assessments/tree/master/cpnt262/final): Deployed Product/Services Website
   - Instructor [Tony Grime's](https://github.com/acidtone) code as reference.
