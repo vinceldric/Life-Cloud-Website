@@ -61,6 +61,10 @@ app.get('/gallery', function(req, res) {
   });
 });
 
+app.get('/api/v0/gallery', function(req, res) {
+  res.json(clouds);
+});
+
 // Gallery image by ID
 app.get('/gallery/:id', function(req, res) {
   const galleryIndiv = clouds.find( c => c.id === parseInt(req.params.id));
@@ -74,7 +78,7 @@ app.get('/gallery/:id', function(req, res) {
 // Subscribe page
 app.get('/subscribe', function(req, res) {
   res.render('pages/subscribe', {
-    title: "Subscribe", 
+    title: "Subscribe Here !", 
     current: "pg-subscribe",
     tagline: "Receive our newsletters and updates!"
   });
@@ -89,23 +93,8 @@ app.get('/admin', function(req, res) {
   });
 });
 
-app.get('/api/v0/admin', function(req, res) {
-  Subscriber.find({}, function(err, data) {
-    if(err) {
-      res.send('<p>Could not retrieve places.</p><p>Please import \'places\' to database.</p>');
-    } else {
-      res.json(data);
-    }
-  });
-});
-
-
 // JSON Endpoints 
 // Gallery
-app.get('/api/v0/gallery', function(req, res) {
-  res.json(clouds);
-});
-
 app.get('/gallery/api/v0/clouds', function(req, res) {
   Cloud.find({}, function(err, data) {
     if(err) {
@@ -116,6 +105,7 @@ app.get('/gallery/api/v0/clouds', function(req, res) {
   });
 });
 
+//individual object
 app.get('/gallery/api/v0/clouds/:id', function(req, res) {
   let cloudId = req.params.id;
   Cloud.findOne({id: cloudId}, function(err, data) {
@@ -144,6 +134,16 @@ app.get('/api/subscribers', function(req, res) {
   });
 });
 
+//Admin
+app.get('/api/v0/admin', function(req, res) {
+  Subscriber.find({}, function(err, data) {
+    if(err) {
+      res.send('<p>Could not retrieve subscribers.</p>');
+    } else {
+      res.json(data);
+    }
+  });
+});
 
 // More Middleware
 // Add more middleware for error/fails

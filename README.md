@@ -47,8 +47,29 @@
     - Helped on some changes in CSS file, EJS pages
 
 ## Links to
-  - [Git Hub repo](https://github.com/j-hellman/cpnt262-finalProject)
-  - [Heroku page](https://cpnt262-final-project.herokuapp.com/)
+  - GitHub [Repo](https://github.com/j-hellman/cpnt262-finalProject)
+  - Heroku App [Link](https://cpnt262-final-project.herokuapp.com/)
+
+## HTML Endpoints
+  - /gallery
+    - returns gallery page
+  - /gallery/:id 
+    - :id should be from 1 to 9
+    - returns individual image
+  - /subscribe
+    - returns subscribe page (subscription form)
+  - /admin
+    - returns the list of subscribers
+    - at first this should be empty, but when someone subscribes then the admin page will list the subscriber/s
+
+## JSON Endpoints
+  - /gallery/api/v0/clouds
+    - returns the array of objects of the gallery
+  - /gallery/api/v0/clouds/:id
+    - :id should be from 1 to 9
+    - returns the individual object of the specified ID
+  - /api/subscribers
+    - returns the array of objects of the subscribers
 
 ## Comments
   - We had difficulty on loading images by their ID, but putting correct image source fixed the problem. 
